@@ -4,11 +4,11 @@ create yourself dataset for tensorflow
 
 test code
 
+
 if __name__ == '__main__':
     getTrianList()
     dataroad = "/Users/zhuxiaoxiansheng/Desktop/Yaledata.txt"
     outputdir = "/Users/zhuxiaoxiansheng/Desktop/Yaledata"
-
     trainroad = trans2tfRecord(dataroad,outputdir)
 
     traindata,trainlabel = read_tfRecord(trainroad)
