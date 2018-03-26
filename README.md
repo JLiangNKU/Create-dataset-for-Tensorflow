@@ -5,17 +5,18 @@ create yourself dataset for tensorflow
 test code
 
 
-if __name__ == '__main__':
+
+
+
     getTrianList()
     dataroad = "/Users/zhuxiaoxiansheng/Desktop/Yaledata.txt"
     outputdir = "/Users/zhuxiaoxiansheng/Desktop/Yaledata"
     trainroad = trans2tfRecord(dataroad,outputdir)
-
     traindata,trainlabel = read_tfRecord(trainroad)
 
     image_batch,label_batch = tf.train.shuffle_batch([traindata,trainlabel],
                                             batch_size=100,capacity=2000,min_after_dequeue = 1000) 
-        
+    
     with tf.Session() as sess:
         sess.run(tf.local_variables_initializer())
         sess.run(tf.global_variables_initializer())
@@ -40,6 +41,5 @@ if __name__ == '__main__':
             coord.request_stop()  
             # And wait for them to actually do it.  
             coord.join(threads)      
-
 
     
