@@ -41,5 +41,7 @@ test code
             coord.request_stop()  
             # And wait for them to actually do it.  
             coord.join(threads)      
+            
+ output
 
-    
+ ![](https://github.com/LiangjunFeng/Create-dataset-for-Tensorflow/blob/master/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-03-26%20%E4%B8%8B%E5%8D%883.18.15.png)
